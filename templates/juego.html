@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ahorcado</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='estilos.css') }}">
+</head>
+<body>
+    <h2 class="palabra">{{ ' '.join(palabra) }}</h2>
+
+    <div>
+        <img src="{{ url_for('static', filename=imagen) }}" alt="Ahorcado" width="150" class="ahorcado-img">
+    </div>
+
+    {% if not terminado %}
+        <div class="letras">
+            {% for letra in "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" %}
+                {% if letra in aciertos or letra in errores %}
+                    <button disabled>{{ letra }}</button>
+                {% else %}
+                    <a href="{{ url_for('intento', letra=letra) }}">
+                        <button>{{ letra }}</button>
+                    </a>
+                {% endif %}
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    {% if terminado %}
+        <h3>{{ mensaje }}</h3>
+        <a href="{{ url_for('reiniciar') }}">
+            <button class="btn-reiniciar">Regresar a la pantalla principal</button>
+        </a>
+    {% endif %}
+
+    <hr>
+    <br>
+    <h3>Errores: {{ errores|length }} / 6</h3>
+
+</body>
+</html>

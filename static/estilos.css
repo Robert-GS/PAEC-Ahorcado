@@ -1,0 +1,168 @@
+/* Estilo general */
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background: url("../static/Fondo03.jpg") no-repeat center center fixed;
+    background-size: cover;  /* hace que cubra toda la pantalla */
+    background-color: #000000;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Título */
+h1 {
+    font-size: 12px;
+    color: #222;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h2 {
+    font-size: 24px;
+    color: #222;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+h3 {
+    font-size: 36px;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Palabra en progreso */
+.palabra {
+    color: #ffffff;
+    font-size: 2em;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+}
+
+/* Botones de letras */
+.letras button,
+.letras a button {
+    margin: 4px;
+    padding: 8px 12px;
+    font-size: 2em;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: white;
+    transition: 0.3s;
+}
+
+.letras a button:hover {
+    background-color: #2980b9;
+}
+
+.inicio-boton {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.inicio-boton:hover {
+    background-color: #2980b9;
+}
+
+.letras button[disabled] {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Botón de reinicio */
+.btn-reiniciar {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 1.2em;
+    background-color: #50e73c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-reiniciar:hover {
+    background-color: #015802;
+}
+
+/* Imagen del ahorcado */
+.ahorcado-img {
+    margin: 20px auto;
+    border: 3px solid #444;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.autor {
+    position: absolute;
+    bottom: 20px;        /* distancia desde el fondo */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: bold;
+    color: #2c3e50;
+    background: rgba(255,255,255,0.7); /* opcional, para contraste con el fondo */
+    padding: 5px 15px;
+    border-radius: 8px;
+}
+
+.container {
+    margin-top: 100px;
+}
+
+body.inicio {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: url("../static/Fondo01.jpg") repeat;
+    background-size: auto; /* usa el tamaño real de la imagen */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial Black', sans-serif;
+}
+
+/* Contenedor central */
+.inicio-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 40px 60px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+/* Estilo del título */
+.titulo {
+    font-size: 60px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+/* Estilo del botón de inicio */
+.btn-inicio {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 22px;
+    color: white;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    border: none;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+}
+
+.btn-inicio:hover {
+    background: linear-gradient(135deg, #66bb6a, #388e3c);
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+}
